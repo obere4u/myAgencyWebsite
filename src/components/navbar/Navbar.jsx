@@ -5,7 +5,7 @@ import { lusitana } from "@/lib/fonts";
 
 export default function Navbar() {
   return (
-    <nav className="bg-inherit fixed z-[999] w-full flex items-center p-4">
+    <nav className="bg-inherit w-full flex items-center p-4">
       {/*Logo*/}
       <Link
         href={"/"}
