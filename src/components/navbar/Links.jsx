@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 //Links array
 const links = [
@@ -32,25 +33,34 @@ export default function Links() {
       {/*Desktop menu*/}
       <div className="hidden md:block">
         {links.map((link, index) => (
-          <Link
-            href={link.path}
-            key={link.title + index}
+          <motion.div
+            whileHover={{ scale: 1.1 }}
             className={clsx(
               lusitana.className,
-              "w-fit inline-flex mx-8 capitalize text-primary-obereGrey hover:text-secondary-white text-xl hover:scale-[1.02] ",
+              "w-fit inline-flex mx-8 capitalize text-primary-obereGrey hover:text-secondary-white text-xl ",
               {
                 "text-primary-obereWhite border-b border-b-primary-obereGrey scale-[1.02]":
                   pathname === link.path,
               }
             )}
           >
-            {link.title}
-          </Link>
+            <Link
+              href={link.path}
+              key={link.title + index}
+            >
+              {link.title}
+            </Link>
+          </motion.div>
         ))}
       </div>
 
       {/*Mobile Links*/}
-      <div className={`md:hidden ${openMobileMenu && "absolute pt-10 px-4 top-0 right-0 w-1/2 bg-primary-obereWhite h-screen flex items-start justify-center flex-row-reverse"}`}>
+      <div
+        className={`md:hidden ${
+          openMobileMenu &&
+          "absolute pt-10 top-0 right-0 w-1/2 bg-primary-obereWhite h-screen flex items-start justify-center flex-row-reverse"
+        }`}
+      >
         <button onClick={() => setOpenMobileMenu((prev) => !prev)}>Menu</button>
 
         {openMobileMenu && (
