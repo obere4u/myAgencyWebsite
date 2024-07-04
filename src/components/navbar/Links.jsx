@@ -6,15 +6,16 @@ import React, { useState } from "react";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
+import { cn } from "@/utils/cn";
 
 //Links array
 const links = [
   {
-    title: "about",
+    title: "about us",
     path: "/about",
   },
   {
-    title: "contact",
+    title: "contact us",
     path: "/contact",
   },
   {
@@ -29,36 +30,32 @@ export default function Links() {
   const pathname = usePathname();
 
   return (
-    <div>
+    <div className="w-1/2 flex ml-auto">
       {/*Desktop menu*/}
-      <div className="hidden md:block">
+      <div className="hidden sm:w-full md:w-[70%] lg:w-[50%] md:ml-auto sm:flex sm:justify-between ">
         {links.map((link, index) => (
           <motion.div
+            key={link.title + index}
             whileHover={{ scale: 1.1 }}
-            className={clsx(
+            className={cn(
               lusitana.className,
-              "w-fit inline-flex mx-8 capitalize text-primary-obereGrey hover:text-secondary-white text-xl ",
+              "w-fit capitalize text-primary-obereGrey hover:text-primary-obereYellow text-xl ",
               {
-                "text-primary-obereWhite border-b border-b-primary-obereGrey scale-[1.02]":
+                "text-primary-obereYellow border-b border-b-primary-obereGrey scale-[1.02]":
                   pathname === link.path,
               }
             )}
           >
-            <Link
-              href={link.path}
-              key={link.title + index}
-            >
-              {link.title}
-            </Link>
+            <Link href={link.path}>{link.title}</Link>
           </motion.div>
         ))}
       </div>
 
       {/*Mobile Links*/}
       <div
-        className={`md:hidden ${
+        className={`sm:hidden ml-auto text-white ${
           openMobileMenu &&
-          "absolute pt-10 top-0 right-0 w-1/2 bg-primary-obereWhite h-screen flex items-start justify-center flex-row-reverse"
+          "absolute pt-10 top-0 right-0 w-1/2 bg-primary-obereWhite h-screen flex items-start justify-center flex-row-reverse text-black"
         }`}
       >
         <button onClick={() => setOpenMobileMenu((prev) => !prev)}>Menu</button>
@@ -71,9 +68,9 @@ export default function Links() {
                 href={link.path}
                 className={clsx(
                   lusitana.className,
-                  "w-fit flex flex-col my-8 capitalize text-primary-obereGrey hover:text-secondary-darkGrey text-xl hover:scale-[1.02] ",
+                  "w-fit flex flex-col my-8 capitalize text-primary-obereGrey hover:text-primary-obereYellow text-xl hover:scale-[1.02] ",
                   {
-                    "text-secondary-darkGrey border-b border-b-primary-obereGrey scale-[1.02]":
+                    "text-primary-obereYellow border-b border-b-primary-obereGrey scale-[1.02]":
                       pathname === link.path,
                   }
                 )}

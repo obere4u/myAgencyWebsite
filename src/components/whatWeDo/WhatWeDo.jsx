@@ -1,5 +1,5 @@
 import React from "react";
-import Services from "./services";
+import Services from "./components/Services";
 
 export default function WhatWeDo() {
   return (

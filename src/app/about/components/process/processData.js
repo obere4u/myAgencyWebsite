@@ -1,11 +1,11 @@
-export const valuesData = [
+export const processData = [
   {
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
-        stroke="#fff"
+        stroke="#000000"
         width={48}
         height={48}
         className="mx-auto"
@@ -14,12 +14,13 @@ export const valuesData = [
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="M12 2a7 7 0 00-7 7c0 2.22 1.21 4.15 3 5.19V16a1 1 0 001 1h6a1 1 0 001-1v-1.81c1.79-1.04 3-2.97 3-5.19a7 7 0 00-7-7zm-2 18h4m-4 2h4m-6-4h8"
+          d="M8 7V3m8 4V3m-6 14h4M5 21h14M4 3h16a1 1 0 011 1v14a1 1 0 01-1 1H4a1 1 0 01-1-1V4a1 1 0 011-1z"
         />
       </svg>
     ),
-    title: "Innovation",
-    description: "We strive to stay ahead of the curve...",
+    title: "Discovery",
+    description:
+      "Understanding your needs and goals through in-depth research and analysis.",
   },
   {
     icon: (
@@ -27,29 +28,22 @@ export const valuesData = [
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
-        stroke="#fff"
+        stroke="#000000"
         width={48}
         height={48}
         className="mx-auto"
       >
-        <circle
-          cx="12"
-          cy="12"
-          r="9"
-          stroke="#fff"
-          strokeWidth="2"
-          fill="none"
-        />
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="M9 12l2 2 4-4"
+          d="M11 17l-1-5 4-4 5 4v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5l4-4 4 4 1 5h-3z"
         />
       </svg>
     ),
-    title: "Integrity",
-    description: "We believe in transparency and honesty...",
+    title: "Strategy",
+    description:
+      "Formulating a strategic plan to achieve your business objectives.",
   },
   {
     icon: (
@@ -57,7 +51,7 @@ export const valuesData = [
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
-        stroke="#fff"
+        stroke="#000000"
         width={48}
         height={48}
         className="mx-auto"
@@ -66,12 +60,13 @@ export const valuesData = [
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="M5 13l4 4L19 7"
+          d="M4 6h16M4 10h16M4 14h16M4 18h16"
         />
       </svg>
     ),
-    title: "Excellence",
-    description: "We strive for the highest standards in everything we do...",
+    title: "Design",
+    description:
+      "Creating a visually appealing design that aligns with your brand identity.",
   },
   {
     icon: (
@@ -79,7 +74,7 @@ export const valuesData = [
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
-        stroke="#fff"
+        stroke="#000000"
         width={48}
         height={48}
         className="mx-auto"
@@ -88,12 +83,13 @@ export const valuesData = [
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="M12 4.5v15m-7-7.5h14"
+          d="M5 3a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2H5zm7 4h1v3H9.5v2h2.5v3h-1.5v2h4v-2H13V9h2.5V7H12z"
         />
       </svg>
     ),
-    title: "Teamwork",
-    description: "We believe in the power of collaboration and working together...",
+    title: "Development",
+    description:
+      "Transforming designs into high-performance, responsive websites.",
   },
   {
     icon: (
@@ -101,7 +97,7 @@ export const valuesData = [
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
-        stroke="#fff"
+        stroke="#000000"
         width={48}
         height={48}
         className="mx-auto"
@@ -110,12 +106,13 @@ export const valuesData = [
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="M3 3v18h18V3H3zm16 16H5V5h14v14z"
+          d="M12 3v4m0 10v4m7-7h-4m-6 0H5m7 7a9 9 0 110-18 9 9 0 010 18z"
         />
       </svg>
     ),
-    title: "Accountability",
-    description: "We take responsibility for our actions and results...",
+    title: "Optimization",
+    description:
+      "Enhancing website performance and SEO to drive traffic and engagement.",
   },
   {
     icon: (
@@ -123,7 +120,7 @@ export const valuesData = [
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
-        stroke="#fff"
+        stroke="#000000"
         width={48}
         height={48}
         className="mx-auto"
@@ -132,11 +129,35 @@ export const valuesData = [
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="M15 12a3 3 0 11-6 0 3 3 0 016 0zm4 0a7 7 0 10-14 0 7 7 0 0014 0z"
+          d="M5 12h14M12 5l7 7-7 7"
         />
       </svg>
     ),
-    title: "Customer Focus",
-    description: "Our customers are at the heart of everything we do...",
+    title: "Launch",
+    description:
+      "Deploying your website and ensuring a smooth, successful launch.",
+  },
+  {
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="#000000"
+        width={48}
+        height={48}
+        className="mx-auto"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M12 2a9 9 0 110 18 9 9 0 010-18zM12 6v6h4"
+        />
+      </svg>
+    ),
+    title: "Maintenance",
+    description:
+      "Providing ongoing support and maintenance to keep your website up-to-date.",
   },
 ];

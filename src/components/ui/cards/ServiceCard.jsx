@@ -37,14 +37,14 @@ export const ServiceCard = ({ items, className }) => {
         animate={isInView ? "show" : "hidden"}
         ref={ref}
         className={cn(
-          "grid place-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 py-10",
+          "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 py-10",
           className
         )}
       >
         {items.map((item, index) => (
           <div
             key={index}
-            className=" rounded-lg group block p-2 h-full w-full"
+            className=" rounded-lg group block  h-full w-full"
           >
             <Card>
               <CardImage>{item.icon}</CardImage>
@@ -70,13 +70,11 @@ const Card = ({ className, children }) => {
         ref={ref}
         whileHover={{ scale: 1.02 }}
         className={cn(
-          "rounded-2xl h-full w-full p-4 overflow-hidden bg-primary-obereBlack",
+          "rounded-2xl h-full w-full p-4 border border-black overflow-hidden bg-primary-obereBlack",
           className
         )}
       >
-        <div className="">
-          <div className="p-4">{children}</div>
-        </div>
+        <div className="p-4">{children}</div>
       </motion.div>
     </AnimatePresence>
   );
@@ -98,7 +96,7 @@ const CardDescription = ({ className, children }) => {
   return (
     <p
       className={cn(
-        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-base",
         className
       )}
     >

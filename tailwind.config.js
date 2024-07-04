@@ -1,7 +1,3 @@
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -16,22 +12,26 @@ module.exports = {
         primary: {
           obereBlack: "#141217",
           obereWhite: "#FDF7FF",
-          obereGrey: "#919191",
+          obereGrey: "#FFFFFF",
+          obereYellow: "#FFFF00",
         },
         secondary: {
           darkGrey: "#2b2b2b",
           lightGrey: "#f7fafc",
           white: "#FDF7FF",
+          blueDark: "#080d27",
+          blueLight: "#3d5289",
+          blueGrey: "#252b47",
+          blueWhite: "#1f2f6d",
         },
         alert: {
           red: "#ED3232",
           green: "#34A853",
         },
       },
-      backgroundImage: {
-        "hero-pattern": "url('/bg-img.jpg')",
-        "custom-gradient1":
-          "linear-gradient(rgba(0, 0, 0, 0) 5.59%, rgba(0, 0, 0, 0.15) 53.05%, rgba(0, 0, 0, 0) 79.73%)",
+      boxShadow: {
+        spreadShadow:
+          "0px -10px 30px -5px rgba(7, 89, 133, 0.3), 0px 10px 30px -5px rgba(7, 89, 133, 0.3)",
       },
     },
   },

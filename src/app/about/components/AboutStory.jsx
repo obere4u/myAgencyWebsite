@@ -48,7 +48,7 @@ export default function AboutStory() {
         variants={variants}
         animate={isInView ? "show" : "hidden"}
         ref={ref}
-        className="my-16"
+        className="my-8"
       >
         <motion.h2
           variants={title}

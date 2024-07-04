@@ -1,6 +1,7 @@
-import { ServiceCard } from "../ui/cards/ServiceCard";
+import { ServiceCard } from "@/components/ui/cards/ServiceCard";
 
-const services = [
+
+const servicesData = [
   {
     title: "Web Development",
     description:
@@ -37,7 +38,7 @@ export default function Services() {
    return (
     <section className="text-center" >
       <h2 className="text-4xl font-bold mb-8">Our Services</h2>
-      <ServiceCard items={services} />
+      <ServiceCard items={servicesData} />
     </section>
   );
 }

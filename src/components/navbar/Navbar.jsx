@@ -6,7 +6,7 @@ import clsx from "clsx";
 
 export default function Navbar() {
   return (
-    <nav className="bg-primary-obereBlack/90 fixed z-[9999] p-8 w-full flex items-center ">
+    <nav className="bg-primary-obereBlack fixed z-[999] p-8 w-full flex items-center ">
       {/*Logo*/}
       {/*
        * &#123; is the left hand curly bracket
@@ -14,14 +14,25 @@ export default function Navbar() {
        */}
       <Link
         href={"/"}
-        className={clsx(lusitana.className, "text-primary-obereGrey ")}
+        className={clsx(lusitana.className, "text-primary-obereGrey")}
       >
-        <span className="text-blue-700">&#123;</span> Mesh{" "}
-        <span className="text-blue-700">&#125;</span>
+        <span
+          className="text-blue-700"
+          sr-hidden="true"
+        >
+          &#123;
+        </span>
+        <span>Mesh</span>
+        <span
+          className="text-blue-700"
+          sr-hidden="true"
+        >
+          &#125;
+        </span>
       </Link>
 
       {/*Links*/}
-      <div className="ml-auto ">
+      <div className="flex flex-1">
         <Links />
       </div>
     </nav>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import ClientLayout from "./clientLayout";
 import WhatWeDo from "@/components/whatWeDo/WhatWeDo";
-
+import Pricing from "@/components/pricing/Pricing";
 
 export default function HomePage() {
   return (
@@ -11,7 +11,7 @@ export default function HomePage() {
         <div className="min-h-[calc(100vh+38px)] flex items-center justify-center">
           <div className="flex flex-col justify-center space-y-12 items-center w-[90%] mt-20 ">
             <div className="flex flex-col items-center space-y-8">
-              <h1 className="text-primary-obereWhite text-center text-4xl md:text-5xl lg:text-6xl leading-[130%] ">
+              <h1 className="text-primary-obereWhite text-centertext-4xl md:text-5xl lg:text-6xl leading-[180%] ">
                 Empowering Your{" "}
                 <span className="text-blue-600 tracking-wide uppercase">
                   Vision
@@ -49,6 +49,9 @@ export default function HomePage() {
         </div>
 
         <WhatWeDo />
+        
+        {/*Pricing*/}
+        <Pricing />
       </main>
     </ClientLayout>
   );
