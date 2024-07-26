@@ -61,7 +61,7 @@ const titleIcon = (
 
 export const PricingCard = ({ items, className }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, {once: true });
 
   return (
     <AnimatePresence>
@@ -78,9 +78,9 @@ export const PricingCard = ({ items, className }) => {
         {items.map((item, index) => (
           <div
             key={index}
-            className="rounded-lg group block h-full w-full"
+            className="rounded-lg group block h-full w-full hover:scale-[1.03] "
           >
-            <Card className={"flex flex-col"}>
+            <Card>
               <CardTitle>
                 {titleIcon}
                 {item.title}
@@ -151,7 +151,7 @@ const Card = ({ className, children }) => {
   return (
     <AnimatePresence>
       <motion.div
-        className="relative w-full h-full rounded-2xl bg-transparent group shadow-md shadow-secondary-blueDark hover:shadow-spreadShadow"
+        className="relative w-full h-full rounded-2xl bg-transparent group shadow-md shadow-secondary-blueDark border hover:shadow-spreadShadow"
         ref={boxRef}
         style={{ perspective: 600 }}
         onMouseMove={(e) => handleMouseMove(e)}
@@ -199,14 +199,16 @@ const Card = ({ className, children }) => {
                 }}
                 exit={{ opacity: 0, scale: 0 }}
                 transition={{ type: "tween" }}
-                
               />
             </>
           )}
 
-          <div className=" p-4 h-full ">
+          <div className=" py-2 px-1 h-full flex flex-col">
             {React.Children.map(children, (child) => (
-              <motion.div transition={{ type: "spring", stiffness: 300 }}>
+              <motion.div
+                transition={{ type: "spring", stiffness: 300 }}
+                className="h-full flex flex-col"
+              >
                 {child}
               </motion.div>
             ))}
@@ -233,7 +235,7 @@ const CardPrice = ({ className, children }) => {
 const CardTitle = ({ className, children }) => {
   return (
     <span
-      className={cn("text-zinc-900 font-bold tracking-wide mt-4 ", className)}
+      className={cn("text-zinc-600 font-bold tracking-wide mt-2 ", className)}
     >
       {children}
     </span>
@@ -244,7 +246,7 @@ const CardDescription = ({ className, description }) => {
   return (
     <ul
       className={cn(
-        "list-none w-[90%] bg-transparent mt-8 text-primary-obereGrey font-semibold tracking-wide leading-relaxed text-base",
+        "list-none w-[90%] bg-transparent mt-2 text-primary-obereGrey font-semibold tracking-wide leading-relaxed text-base mb-8",
         className
       )}
     >

@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import ClientLayout from "./clientLayout";
 import WhatWeDo from "@/components/whatWeDo/WhatWeDo";
 import Pricing from "@/components/pricing/Pricing";
+import { Popup } from "@typebot.io/nextjs";
 
 export default function HomePage() {
   return (
@@ -49,10 +52,22 @@ export default function HomePage() {
         </div>
 
         <WhatWeDo />
-        
+
         {/*Pricing*/}
         <Pricing />
       </main>
+
+      {/*Typebot popup */}
+      <div className="absolute bottom-0 right-0">
+        <Popup
+          typebot={"mesh-a-gency-2mv9j6g"}
+          style={{
+            positio: "aboslute"
+          }}
+          autoShowDelay={5000}
+        />
+        ;
+      </div>
     </ClientLayout>
   );
 }
